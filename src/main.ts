@@ -59,7 +59,7 @@ async function run(): Promise<void> {
 
         let triggeringSha = process.env.GITHUB_SHA as string;
         let sha: string | undefined = undefined;
-        
+
         if (runs.length > 0) {
             for (const run of runs) {
                 core.debug(`This SHA: ${triggeringSha}`);
@@ -94,7 +94,6 @@ async function run(): Promise<void> {
             sha = triggeringSha;
         }
 
-        core.setOutput('sha', sha);
     } catch (error: any) {
         core.setFailed(error?.message);
     }

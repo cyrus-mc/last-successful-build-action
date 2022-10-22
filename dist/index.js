@@ -9623,7 +9623,6 @@ function run() {
                 core.warning("Unable to determine SHA of last successful commit. Using SHA for current commit.");
                 sha = triggeringSha;
             }
-            core.setOutput('sha', sha);
         }
         catch (error) {
             core.setFailed(error === null || error === void 0 ? void 0 : error.message);
